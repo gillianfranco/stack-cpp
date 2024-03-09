@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stack.h>
+#include "stack.h"
 using namespace std;
 
 stack::stack(){
@@ -20,7 +20,7 @@ bool stack::isEmpty(){
 }
 
 void stack::push(TipoItem item){
-    if(isEmpty){
+    if(!isFull()){
         estrutura[tamanho] = item;
         tamanho++;
     }else{
@@ -29,7 +29,7 @@ void stack::push(TipoItem item){
 }
 
 TipoItem stack::pop(){
-    if(!isEmpty){
+    if(!isEmpty()){
         tamanho--;
         return estrutura[tamanho];
     }else{
