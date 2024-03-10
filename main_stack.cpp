@@ -7,9 +7,10 @@ int main(){
     TipoItem item;
     int opcao;
 
+    cout << " ------ Gerenciador de Pilha ----- ";
+
     do{
-        cout << " ------ Gerenciador de Pilha ----- ";
-        cout << "\n0 - Sair.\n1 - Para Inserir um novo elemento.\n2 - Para Remover um elemento.\n3 - Imprimir a pilha.\n4 - Informar tamanho da pilha.\n\n";
+        cout << "\n\n0 - Sair.\n1 - Para Inserir um novo elemento.\n2 - Para Remover um elemento.\n3 - Imprimir a pilha.\n4 - Informar tamanho da pilha.\n\n";
         cout << "Digite: ";
         cin >> opcao;
         switch(opcao){
@@ -19,8 +20,8 @@ int main(){
             case 1:
                 cout << "Digite o elemento a ser inserido: ";
                 cin >> item;
-                cout << endl;
                 Pilha1.push(item);
+                cout << endl;
                 break;
             case 2:
                 item = Pilha1.pop();
@@ -40,6 +41,7 @@ int main(){
                 system("pause >> NULL");
                 break;
         }
+        cout << "\n --------------------------------- ";
     }while(opcao != 0);
 
     return 0;
